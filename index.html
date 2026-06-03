@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maciej Fedoruk // SQA Consultant</title>
+  <meta name="description" content="Maciej Fedoruk — Senior Software Test Engineer & QA Consultant. Test automation, CI/CD, and QA process consulting." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0b0f0b;
+      --panel: #11160f;
+      --green: #39ff14;
+      --amber: #ffb000;
+      --blue: #00d2ff;
+      --dim: #1e7a12;
+      --border: #39ff14;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background-color: var(--bg);
+      /* faint scanline overlay for CRT vibe */
+      background-image: repeating-linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.25),
+        rgba(0, 0, 0, 0.25) 1px,
+        transparent 1px,
+        transparent 3px
+      );
+      color: var(--green);
+      font-family: 'VT323', monospace;
+      font-size: 22px;
+      line-height: 1.5;
+      padding: 24px 16px;
+      min-height: 100vh;
+    }
+
+    .wrap {
+      max-width: 880px;
+      margin: 0 auto;
+    }
+
+    /* ---- Headings use the pixel font ---- */
+    h1, h2, h3, .pixel {
+      font-family: 'Press Start 2P', monospace;
+      line-height: 1.5;
+    }
+
+    /* ---- Blocky panel ---- */
+    .panel {
+      border: 4px solid var(--border);
+      background: var(--panel);
+      padding: 24px;
+      margin-bottom: 28px;
+      box-shadow: 8px 8px 0 #000;
+    }
+
+    /* ---- Header ---- */
+    header.panel {
+      text-align: center;
+      border-color: var(--amber);
+    }
+
+    h1 {
+      color: var(--amber);
+      font-size: 26px;
+      margin-bottom: 18px;
+      text-shadow: 3px 3px 0 #000;
+      word-break: break-word;
+    }
+
+    .subtitle {
+      color: var(--blue);
+      font-size: 24px;
+      letter-spacing: 1px;
+      margin-bottom: 22px;
+    }
+
+    .blink {
+      animation: blink 1.1s steps(2, start) infinite;
+    }
+    @keyframes blink { to { visibility: hidden; } }
+
+    /* ---- Retro buttons ---- */
+    .btn {
+      display: inline-block;
+      font-family: 'Press Start 2P', monospace;
+      font-size: 13px;
+      color: var(--bg);
+      background: var(--green);
+      border: 3px solid var(--green);
+      padding: 14px 20px;
+      text-decoration: none;
+      box-shadow: 5px 5px 0 #000;
+      transition: transform 0.05s linear;
+    }
+    .btn:hover, .btn:focus {
+      background: var(--bg);
+      color: var(--green);
+      outline: none;
+    }
+    .btn:active {
+      transform: translate(5px, 5px);
+      box-shadow: 0 0 0 #000;
+    }
+
+    /* ---- Section titles ---- */
+    h2 {
+      color: var(--amber);
+      font-size: 18px;
+      margin-bottom: 20px;
+      border-bottom: 3px dashed var(--dim);
+      padding-bottom: 12px;
+    }
+    h2::before { content: "> "; color: var(--green); }
+
+    p { margin-bottom: 12px; }
+
+    /* ---- Experience / high-score board ---- */
+    .job {
+      border-left: 4px solid var(--blue);
+      padding: 6px 0 6px 16px;
+      margin-bottom: 26px;
+    }
+    .job:last-child { margin-bottom: 0; }
+
+    .job-title {
+      font-family: 'Press Start 2P', monospace;
+      font-size: 12px;
+      color: var(--green);
+      line-height: 1.7;
+      margin-bottom: 6px;
+    }
+    .job-date {
+      color: var(--amber);
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    .job ul { list-style: none; }
+    .job li { padding-left: 22px; position: relative; }
+    .job li::before {
+      content: "►";
+      position: absolute;
+      left: 0;
+      color: var(--blue);
+      font-size: 16px;
+    }
+
+    /* ---- Footer ---- */
+    footer.panel {
+      text-align: center;
+      border-color: var(--blue);
+    }
+    .cta {
+      font-family: 'Press Start 2P', monospace;
+      font-size: 14px;
+      color: var(--amber);
+      line-height: 1.8;
+      margin-bottom: 22px;
+    }
+    .credit {
+      color: var(--dim);
+      font-size: 18px;
+      margin-top: 10px;
+    }
+
+    /* ---- Mobile ---- */
+    @media (max-width: 600px) {
+      body { font-size: 20px; padding: 14px 10px; }
+      .panel { padding: 16px; box-shadow: 5px 5px 0 #000; }
+      h1 { font-size: 18px; }
+      .subtitle { font-size: 20px; }
+      h2 { font-size: 14px; }
+      .job-title { font-size: 11px; }
+      .btn { font-size: 11px; padding: 12px 14px; }
+      .cta { font-size: 11px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <!-- ============ HEADER ============ -->
+    <header class="panel">
+      <h1>MACIEJ FEDORUK</h1>
+      <div class="subtitle">Senior Software Test Engineer &amp; QA Consultant</div>
+      <a class="btn" href="mailto:maciej.fedoruk@tlen.pl">[ EMAIL ME ]</a>
+    </header>
+
+    <!-- ============ SERVICES ============ -->
+    <section class="panel">
+      <h2>SQA Consulting Services</h2>
+      <p>
+        I offer professional consultancy in Software Quality Assurance. Whether you
+        need to build test automation frameworks from scratch, integrate automated
+        testing into your CI/CD pipelines, or audit and improve your current QA
+        processes, I can help level up your software quality.
+      </p>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section class="panel">
+      <h2>High-Score Board // Experience</h2>
+
+      <div class="job">
+        <div class="job-title">Senior Software Test Engineer @ Qiagen</div>
+        <div class="job-date">08/2024 - present</div>
+        <ul>
+          <li>Developed and maintained CI/CD pipelines (Jenkins, Azure DevOps) and Allure reporting.</li>
+          <li>Built automation frameworks from scratch for E2E frontend testing.</li>
+          <li>Managed release verification processes.</li>
+          <li>Developing backend tests (Python) and frontend tests (Playwright).</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-title">Software Test Engineer @ Qiagen</div>
+        <div class="job-date">11/2022 - 08/2024</div>
+        <ul>
+          <li>Tested complex IoT biotech cloud project (Azure, microservices, Cosmos DB, MQTT).</li>
+          <li>Built POM-oriented E2E UI automation frameworks (Cypress, TypeScript).</li>
+          <li>Maintained backend automation (Java, Spring Boot, Cucumber).</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-title">Test Engineer &amp; Junior Test Engineer @ InsERT S.A</div>
+        <div class="job-date">09/2019 - 11/2022</div>
+        <ul>
+          <li>Created API test automation frameworks (Java, TestNG).</li>
+          <li>Built POM-oriented UI test frameworks (Java, Selenium).</li>
+          <li>Handled functional, exploratory, and regression manual testing.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="panel">
+      <div class="cta">PRESS START TO COLLABORATE<span class="blink">_</span></div>
+      <p>...or just send me an email to discuss your QA needs.</p>
+      <a class="btn" href="mailto:maciej.fedoruk@tlen.pl">[ START ]</a>
+      <div class="credit">(C) 2026 MACIEJ FEDORUK // INSERT COIN</div>
+    </footer>
+
+  </div>
+</body>
+</html>
